@@ -2,6 +2,7 @@ switch (state) {
 	case states.movement: scr_p_movement(); break;
 	case states.slashing: scr_p_slash(); break;
 	case states.dashing: scr_p_dash(); break;
+	case states.stunned: scr_p_stun(); break;
 }
 show_debug_message(state);
 
@@ -25,5 +26,5 @@ for (var i=0; i<abs(velY)/image_yscale; i++) {
 		y += velY;
 	}
 }
-
-draw_self();
+if (state == states.stunned) draw_set_color(c_white);
+draw_sprite_();

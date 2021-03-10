@@ -7,6 +7,9 @@ fValue = 0.1;
 grav = 0.2;
 grounded = false;
 
+stunLength = 5;
+stuntimer = stunLength;
+
 //CD is cooldown between states
 //Length is how long the state lasts
 slashInvert = false;
@@ -16,6 +19,7 @@ slashCDtimer = slashCD;
 slashLtimer = slashLength;
 
 dashSpeed = 4;
+dashKB = 2;
 dashCD = 30;
 dashLength = 2;
 dashCDtimer = dashCD;
@@ -25,5 +29,6 @@ enum states {
 	movement,
 	slashing,
 	dashing,
+	stunned,
 }
 state = states.movement;

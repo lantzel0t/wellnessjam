@@ -13,6 +13,11 @@ function scr_p_slash(){
 		var swordTipX = x + sin(slashLtimer/slashLength*3)*swordDistance;
 		var swordTipY = y + cos(slashLtimer/slashLength*3)*swordDistance;
 	}
+	
+	with collision_point(swordTipX,swordTipY,o_muru1, true,true) {
+		hp--;
+	}
+	
 	draw_circle(swordTipX,swordTipY,2,true);
 	
 
