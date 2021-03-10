@@ -1,0 +1,5 @@
+Player has a dash and slash.
+Slash affects area of enemies
+Dash affects only one, but has knockback.
+Player has magic weapon that turns enemies to stone.
+On death, enemies take solid form.
