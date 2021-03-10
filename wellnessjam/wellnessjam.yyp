@@ -2,7 +2,11 @@
   "resources": [
     {"id":{"name":"s_tri","path":"sprites/s_tri/s_tri.yy",},"order":5,},
     {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"order":1,},
+    {"id":{"name":"scr_p_dash","path":"scripts/scr_p_dash/scr_p_dash.yy",},"order":3,},
+    {"id":{"name":"scr_input","path":"scripts/scr_input/scr_input.yy",},"order":4,},
     {"id":{"name":"o_camtarget","path":"objects/o_camtarget/o_camtarget.yy",},"order":2,},
+    {"id":{"name":"scr_p_movement","path":"scripts/scr_p_movement/scr_p_movement.yy",},"order":1,},
+    {"id":{"name":"scr_p_slash","path":"scripts/scr_p_slash/scr_p_slash.yy",},"order":2,},
     {"id":{"name":"s_tiles2","path":"sprites/s_tiles2/s_tiles2.yy",},"order":1,},
     {"id":{"name":"s_player","path":"sprites/s_player/s_player.yy",},"order":0,},
     {"id":{"name":"s_tiles","path":"sprites/s_tiles/s_tiles.yy",},"order":2,},

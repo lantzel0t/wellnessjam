@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_tri",
-    "path": "sprites/s_tri/s_tri.yy",
+    "name": "s_wall",
+    "path": "sprites/s_wall/s_wall.yy",
   },
   "solid": false,
   "visible": true,
