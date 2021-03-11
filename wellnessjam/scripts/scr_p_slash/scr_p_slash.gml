@@ -14,15 +14,15 @@ function scr_p_slash(){
 		var swordTipY = y + cos(slashLtimer/slashLength*3)*swordDistance;
 	}
 	
-	with collision_point(swordTipX,swordTipY,o_muru1, true,true) {
+	with collision_point(swordTipX,swordTipY,o_enemy, true,true) {
 		hp--;
 	}
+	var dir = point_direction(x,y,swordTipX,swordTipY);
+	var invertSprite = (slashInvert) ? -1 : 1;
+	draw_sprite_ext(s_sword,4,x,y,invertSprite,1,dir,c_white,1);
 	
 	draw_circle(swordTipX,swordTipY,2,true);
-	
 
-	
-	
 	
 	//Apply half friction
 	if (abs(velX) > 0.001) velX -= sign(velX)*fValue/2;

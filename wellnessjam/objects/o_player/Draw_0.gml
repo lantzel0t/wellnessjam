@@ -4,7 +4,7 @@ switch (state) {
 	case states.dashing: scr_p_dash(); break;
 	case states.stunned: scr_p_stun(); break;
 }
-show_debug_message(state);
+//show_debug_message(state);
 
 //We want to check collision however many times velocity exceeds our width
 //This is likely broken and may cause issues when moving at high speeds
@@ -27,4 +27,4 @@ for (var i=0; i<abs(velY)/image_yscale; i++) {
 	}
 }
 if (state == states.stunned) draw_set_color(c_white);
-draw_sprite_();
+draw_self();

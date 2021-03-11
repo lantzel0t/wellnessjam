@@ -12,13 +12,13 @@ function scr_p_movement(){
 	
 
 	
-	if (inputSlash && slashCDtimer<=0) {
+	if (hasSword && inputSlash && slashCDtimer<=0) {
 		slashCDtimer = slashCD;
 		state=states.slashing;
 	} 
 	slashCDtimer = clamp(slashCDtimer-1,-1,99999);
 
-	if (inputDash && dashCDtimer<=0) {
+	if (hasDash && inputDash && dashCDtimer<=0) {
 		dashCDtimer = dashCD;
 		state=states.dashing;
 	} 

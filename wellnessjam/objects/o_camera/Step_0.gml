@@ -1,3 +1,6 @@
+/// @description Insert description here
+// You can write your code in this editor
+
 //Get camtarget the player is currently in
 var target = collision_point(o_player.x, o_player.y, o_camtarget, false, true);
 var cam = view_camera[0];
@@ -39,3 +42,4 @@ if (target) {
 //show_debug_message(camera_get_view_width(cam));
 
 camera_set_view_pos(cam, round(x - (camW / 2)), round(y - (camH / 2)));
+//camera_set_view_size(view_camera[0], view_wport[0], view_hport[0]);
