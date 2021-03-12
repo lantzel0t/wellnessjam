@@ -6,12 +6,14 @@ function scr_p_slash(){
 	
 	//Sword slash:
 	//Calculate point in a circle
+	var dir = point_direction(x,y,mouse_x,mouse_y);
+	
 	if (slashInvert) {
-		var swordTipX = x + sin((slashLength-slashLtimer)/slashLength*3)*swordDistance;
-		var swordTipY = y + cos((slashLength-slashLtimer)/slashLength*3)*swordDistance;
+		var swordTipX = x + sin(((slashLength-slashLtimer)/slashLength*3)+degtorad(dir))*swordDistance;
+		var swordTipY = y + cos(((slashLength-slashLtimer)/slashLength*3)+degtorad(dir))*swordDistance;
 	} else {
-		var swordTipX = x + sin(slashLtimer/slashLength*3)*swordDistance;
-		var swordTipY = y + cos(slashLtimer/slashLength*3)*swordDistance;
+		var swordTipX = x + sin((slashLtimer/slashLength*3)+degtorad(dir))*swordDistance;
+		var swordTipY = y + cos((slashLtimer/slashLength*3)+degtorad(dir))*swordDistance;
 	}
 	
 	with collision_point(swordTipX,swordTipY,o_enemy, true,true) {
@@ -19,9 +21,9 @@ function scr_p_slash(){
 	}
 	var dir = point_direction(x,y,swordTipX,swordTipY);
 	var invertSprite = (slashInvert) ? -1 : 1;
-	draw_sprite_ext(s_sword,4,x,y,invertSprite,1,dir,c_white,1);
+	draw_sprite_ext(s_sword,4,x,y,1,invertSprite,dir,c_white,1);
 	
-	draw_circle(swordTipX,swordTipY,2,true);
+	//draw_circle(swordTipX,swordTipY,2,true);
 
 	
 	//Apply half friction

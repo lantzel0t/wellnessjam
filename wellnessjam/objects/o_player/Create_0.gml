@@ -20,10 +20,20 @@ slashLtimer = slashLength;
 
 dashSpeed = 4;
 dashKB = 2;
-dashCD = 30;
+dashCD = 10;
 dashLength = 2;
 dashCDtimer = dashCD;
 dashLtimer = dashLength;
+
+
+foot1xC = x;
+foot1yC = y;
+foot2xC = x;
+foot2yC = y;
+stepWidth = 10;
+footOffset = 6;
+
+
 
 enum states {
 	movement,

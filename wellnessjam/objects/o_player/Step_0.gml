@@ -10,3 +10,7 @@ if (muru) {
 if (place_meeting(x,y,o_levelend)) {
 	room_goto_next();
 }
+
+if (keyboard_check_released(ord("R"))) {
+	room_restart();
+}
