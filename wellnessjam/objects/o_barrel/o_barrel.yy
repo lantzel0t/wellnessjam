@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "s_levelend",
-    "path": "sprites/s_levelend/s_levelend.yy",
+    "name": "s_barrel",
+    "path": "sprites/s_barrel/s_barrel.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_smashable",
+    "path": "objects/o_smashable/o_smashable.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -28,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_levelend",
+  "name": "o_barrel",
   "tags": [],
   "resourceType": "GMObject",
 }

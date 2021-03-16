@@ -9,7 +9,7 @@ switch (state) {
 //We want to check collision however many times velocity exceeds our width
 //This is likely broken and may cause issues when moving at high speeds
 for (var i=0; i<abs(velX)/image_xscale; i++) {
-	if (place_meeting(x + velX, y, o_wall)) {
+	if (place_meeting(x + velX, y, o_wall) && instance_place(x + velX, y, o_wall).solid == true) {
 		velX = 0;
 		break;
 	} else {
@@ -19,7 +19,7 @@ for (var i=0; i<abs(velX)/image_xscale; i++) {
 
 //Vertical collision/movement
 for (var i=0; i<abs(velY)/image_yscale; i++) {
-	if (place_meeting(x, y + velY, o_wall)) {
+	if (place_meeting(x, y + velY, o_wall) && instance_place(x, y + velY, o_wall).solid == true) {
 		velY = 0;
 		break;
 	} else {
@@ -29,7 +29,8 @@ for (var i=0; i<abs(velY)/image_yscale; i++) {
 
 scr_p_ik();
 
-
+if (velX > 0) image_index = 0;
+if (velX < 0) image_index = 1;
 
 
 if (state == states.stunned) {

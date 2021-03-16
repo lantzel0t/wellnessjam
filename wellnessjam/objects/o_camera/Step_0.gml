@@ -19,15 +19,15 @@ if (target) {
 		break;
 	case "Valign"://long hallways
 		camera_set_view_size(cam,
-			lerp(camW, target.sprite_width, lerpVal),
-			lerp(camH, target.sprite_width, lerpVal));
+			lerp(camW, target.sprite_height, lerpVal),
+			lerp(camH, target.sprite_height, lerpVal));
 		x = lerp(x, o_player.x, lerpVal);
 		y = lerp(y, target.y, lerpVal);
 		break;
 	case "Halign"://tall rooms
 		camera_set_view_size(cam,
-			lerp(camW, target.sprite_height, lerpVal),
-			lerp(camH, target.sprite_height, lerpVal));
+			lerp(camW, target.sprite_width, lerpVal),
+			lerp(camH, target.sprite_width, lerpVal));
 		x = lerp(x, target.x, lerpVal);
 		y = lerp(y, o_player.y, lerpVal);
 		break;

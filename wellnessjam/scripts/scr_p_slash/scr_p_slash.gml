@@ -19,6 +19,12 @@ function scr_p_slash(){
 	with collision_point(swordTipX,swordTipY,o_enemy, true,true) {
 		hp--;
 	}
+	with collision_point(swordTipX,swordTipY, o_smashable,true, true) {
+		//Instantly start animation
+		if (!smashed) image_index = 1;
+		mask_index = s_empty;
+		smashed = true;
+	}
 	var dir = point_direction(x,y,swordTipX,swordTipY);
 	var invertSprite = (slashInvert) ? -1 : 1;
 	draw_sprite_ext(s_sword,4,x,y,1,invertSprite,dir,c_white,1);
